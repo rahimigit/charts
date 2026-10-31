@@ -1,13 +1,8 @@
 name: "Charts: Lint and test"
 
 on:
-  pull_request:
-    paths:
-    - 'charts/**'
-    - '!charts/**/README.md'
-    - '!charts/**/README.md.gotmpl'
-    - '!charts/**/README_CHANGELOG.md.gotmpl'
-    - '!charts/**/README_CONFIG.md.gotmpl'
+  # automatic triggers removed 2026-10-30 to stop burning hosted-runner minutes; run manually
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.head_ref }}-lint

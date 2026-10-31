@@ -2,14 +2,8 @@
 name: 'Metadata: Label Commenter'
 
 on:
-  issues:
-    types:
-      - labeled
-      - unlabeled
-  pull_request_target:
-    types:
-      - labeled
-      - unlabeled
+  # automatic triggers removed 2026-10-30 to stop burning hosted-runner minutes; run manually
+  workflow_dispatch:
 
 permissions:
   contents: read

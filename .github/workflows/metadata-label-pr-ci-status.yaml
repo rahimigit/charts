@@ -2,12 +2,8 @@
 name: "Metadata: Label pull requests CI status"
 
 on:
-  workflow_run:
-    workflows:
-    - "Pre-commit consistency check"
-    - "Charts: Lint and test"
-    types:
-    - completed
+  # automatic triggers removed 2026-10-30 to stop burning hosted-runner minutes; run manually
+  workflow_dispatch:
 
 jobs:
   label-precommit:
